@@ -4,26 +4,26 @@
 #
 
 # Inherit from those products. Most specific first.
-TARGET_SUPPORTS_OMX_SERVICE := false
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_system.mk)
 
-# Inherit from device.
+# Inherit from veux device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Resurrected Remix stuff
+$(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
+# Flags da Resurrected Remix
+TARGET_BOOT_ANIMATION_RES := 1080
+WITH_GMS := true
 
+# Identificação do Dispositivo
 PRODUCT_BRAND := Redmi
 PRODUCT_DEVICE := veux
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := 2201116SG
-PRODUCT_NAME := lineage_veux
+PRODUCT_NAME := rr_veux
 PRODUCT_SYSTEM_NAME := veux_eea
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
