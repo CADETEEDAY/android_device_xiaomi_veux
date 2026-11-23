@@ -4,4 +4,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_veux.mk
+    $(LOCAL_DIR)/rr_veux.mk
+
+COMMON_LUNCH_CHOICES := \
+    rr_veux-user \
+    rr_veux-userdebug \
+    rr_veux-eng
